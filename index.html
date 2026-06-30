@@ -1,125 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Para Graciela</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-    margin:0;
-    background:#f7f2ea;
-    font-family:'Quicksand',sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    color:#4b4038;
-}
-
-.carta{
-    background:white;
-    width:90%;
-    max-width:700px;
-    padding:50px;
-    border-radius:18px;
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
-    animation:aparecer 1.8s;
-}
-
-h1{
-    font-family:'Cormorant Garamond',serif;
-    text-align:center;
-    font-size:48px;
-    margin-bottom:10px;
-}
-
-.frase{
-    text-align:center;
-    font-style:italic;
-    color:#8b7765;
-    margin-bottom:40px;
-}
-
-p{
-    font-size:20px;
-    line-height:1.9;
-}
-
-.firma{
-    margin-top:50px;
-    text-align:right;
-    font-family:'Cormorant Garamond',serif;
-    font-size:34px;
-}
-
-@keyframes aparecer{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-</style>
-
+    <title>Para Graciela</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="carta">
+<div class="mesa">
 
-<h1>🌿 Para Graciela</h1>
+    <div class="papel">
+<img src="img/branch.png" class="ramita" alt="Ramita">
 
-<div class="frase">
-
-"Hay regalos que se abren con las manos...
-<br>
-y otros que se descubren con el corazón."
-
+<div class="dedicatoria">
+    Esta carta es para vos, Graciela.
 </div>
+
+<div class="contenido" id="textoCarta">
 
 <p>
-
-Si estás leyendo esto, significa que aceptaste dedicarme unos minutos de tu tiempo. Gracias por eso.
-
-<br><br>
-
-No sabés la alegría que me dio haberte conocido.
-
-<br><br>
-
-Con este regalito no quiero impresionarte; simplemente quería hacerte llegar un pequeño detalle para que sepas que pienso en vos.
-
-<br><br>
-
-La verdad es que disfruto mucho hablar con vos y me ilusiona la idea de seguir conociéndote. También tengo muchas ganas de que algún día podamos encontrarnos en persona.
-
-<br><br>
-
-Espero de corazón que este regalo te saque una sonrisa.
-
+    Si estás leyendo esto, significa que aceptaste dedicarme unos minutos de tu tiempo.
+    Gracias por eso.
 </p>
 
-<div class="firma">
+<p>
+    No sabés cuánto me alegra haberte conocido.
+    La verdad es que con este regalito no quiero impresionarte;
+    simplemente quiero que sepas que me hace mucha ilusión seguir conociéndote
+    y que estoy ansioso por conocerte en persona.
+</p>
 
-Con cariño ❤️.
+<p>
+    Siento que tenemos varias cosas en común y me gustaría seguir descubriéndolas,
+    paso a paso.
+</p>
 
-<br>
+<p>
+    Espero de corazón que te guste.
+</p>
 
-Leo Muñoz
+<p class="firma">
+    Con mucho cariño,
+    <br><br>
+    <strong>Leo <3</strong>
+    </p>
+    <div class="musica">
+    <p>Si queres, podes escuchar la misma cancion que yo escuche cuando escribia esta cartita virtual, dedicada especialmente para vos hermosa:</p>
 
+    <button onclick="document.getElementById('cancion').play()">
+    ♪ Escuchar la canción
+</button>
+
+<div style="font-size:14px; margin-top:8px; opacity:0.7;">
+    Magic — Rude
+</div>
 </div>
 
 </div>
 
+    </div>
+
+</div>
+<audio id="cancion">
+    <source src="audio/magic.mp3" type="audio/mpeg">
+</audio>
+
+<div id="inicio" class="inicio">
+    <div class="contenedor-inicio">
+        <h1>Preparé algo con mucho cariño para vos</h1>
+        <button onclick="abrirCarta()">💌 Abrir la carta</button>
+    </div>
+</div>
 </body>
-
+<script src="script.js"></script>
 </html>
